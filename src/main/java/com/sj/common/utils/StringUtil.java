@@ -1,9 +1,58 @@
 package com.sj.common.utils;
 
 import java.io.UnsupportedEncodingException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Random;
 
 public class StringUtil {
+	/**
+	 * 
+	 * @Title: strToInteger 
+	 * @Description: 字符串转数值
+	 * @param str
+	 * @return
+	 * @return: Integer
+	 */
+	public  static Integer strToInteger(String str) {
+		return Integer.parseInt(str);
+	}
+	
+	/**
+	 * 
+	 * @Title: strToDate 
+	 * @Description: 字符串转日期
+	 * @param str
+	 * @return
+	 * @return: Date
+	 */
+	
+	public static Date strToDate(String str) {
+		
+		SimpleDateFormat df = new SimpleDateFormat("yyyyMMdd");
+		try {
+		return	df.parse(str);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		return null;
+		
+	}
+	
+	//字符串切割
+	public static String[] split(String strs,String chars) {
+		
+		return strs.split(chars);
+		
+	}
+	
+	
+	
+	
+	
+	
+	
 	public static boolean hasLength(String str) {
 		
 		return null != str && str.length()>0;

@@ -13,7 +13,7 @@ public class MyH {
 	public static void main(String[] args) throws Exception {
 		
 		  bis = new BufferedInputStream(new FileInputStream("J:\\git\\m2.mp4"));
-		  bos = new BufferedOutputStream(new FileOutputStream("J:\\git\\m4.txt"));
+		  bos = new BufferedOutputStream(new FileOutputStream("J:\\eclipse-workspace\\demo01\\src\\love.txt"));
 		
 		 byte b [] = new byte [1024];
 		 
