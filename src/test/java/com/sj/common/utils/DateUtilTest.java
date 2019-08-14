@@ -2,6 +2,7 @@ package com.sj.common.utils;
 
 import static org.junit.Assert.fail;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -54,6 +55,25 @@ public class DateUtilTest {
 		String str2 = str.replace("{1}",format.format(initMonth)).replace("{2}", format.format(fullMonth));
 		
 		System.out.println(str2);
+	}
+	@Test
+	public void testgetAge() throws Exception {
+		int i = DateUtil.getAge(new Date());
+		
+		System.out.println(i);
+	}
+	@Test
+	public void getDaysByDeparted() throws Exception {
+		int i = DateUtil.getDaysByDeparted(new Date());
+		
+		System.out.println(i);
+	}
+	
+	@Test
+	public void getDaysByFuture() throws Exception {
+		int i = DateUtil.getDaysByFuture(new Date());
+		
+		System.out.println(i);
 	}
 	
 

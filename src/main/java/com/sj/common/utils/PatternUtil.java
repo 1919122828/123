@@ -45,7 +45,8 @@ public class PatternUtil {
 		Matcher m = c.matcher(url);
 		//查找到匹配规则的结果集
 		if(m.find()) {
-			return StringUtil.strToInteger(url);
+			String str = m.group();
+			return StringUtil.strToInteger(str);
 		}
 		return null;
 	}

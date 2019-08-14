@@ -1,7 +1,10 @@
 package com.sj.common.utils;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.logging.SimpleFormatter;
 
 /**
  * 
@@ -57,5 +60,65 @@ public class DateUtil {
 		return c.getTime();
 	
 	}
+	/**
+	 * 
+	 * @Title: getAge 
+	 * @Description: 根据日期获取年龄
+	 * @param src
+	 * @return
+	 * @return: int
+	 * @throws Exception 
+	 */
+	public static int getAge (Date src) throws Exception {
+		Date d1 = new Date();
+		
+		
+		
+		
+		
+		long time = d1.getTime();
+		long time2 = src.getTime();
+		
+		return (int) ((time-time2)/24.0*24.0);
+		}
+	/**
+	 * 
+	 * @Title: getDaysByFuture 
+	 * @Description: 求未来日期离今天还剩的天数
+	 * @param future
+	 * @return
+	 * @return: int
+	 */
+	public static int getDaysByFuture (Date future) {
+		Date date = getDateByFullMonth(new Date());
+		Date date2 = getDateByInitMonth(new Date());
+		
+		long time = date.getTime();
+		long time2 = date2.getTime();
+		
+		return (int) ((time-time2)/(60*60*60*24.0));
+		
+		}
+	/**
+	 * 
+	 * @Title: getDaysByDeparted 
+	 * @Description: 求过去日期离今天过去的天数
+	 * @param departed
+	 * @return
+	 * @return: int
+	 */
+	public static int getDaysByDeparted (Date departed) {
+		
+		Date date = getDateByInitMonth(new Date());
+		
+		long time = date.getTime();
+		long time2 = departed.getTime();
+		
+		
+		
+		return (int) ((time2-time)/(60*60*60*24.0));
+		
+		}
+	
 
 }

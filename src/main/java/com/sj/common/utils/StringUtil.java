@@ -30,7 +30,7 @@ public class StringUtil {
 	
 	public static Date strToDate(String str) {
 		
-		SimpleDateFormat df = new SimpleDateFormat("yyyyMMdd");
+		SimpleDateFormat df = new SimpleDateFormat("yyyyMM");
 		try {
 		return	df.parse(str);
 		} catch (ParseException e) {
