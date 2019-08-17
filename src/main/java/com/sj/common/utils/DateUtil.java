@@ -1,11 +1,36 @@
 package com.sj.common.utils;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Random;
 
 public class DateUtil {
+	
+	
+	/**
+	 * 字符串转成日期格式
+	 * @Title: strToDate 
+	 * @Description: TODO
+	 * @param src
+	 * @return
+	 * @return: Date
+	 */
+	public static Date strToDate(String src,String pattern) {
+		SimpleDateFormat df = new SimpleDateFormat(pattern);
+		Date date =null;
+		try {
+			 date = df.parse(src);
+		} catch (ParseException e) {
+			
+			e.printStackTrace();
+		}
+		return date;
+		
+	}
+	
+	
 	
 	/**
 	 * 

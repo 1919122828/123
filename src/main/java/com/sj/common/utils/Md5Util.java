@@ -24,7 +24,7 @@ public class Md5Util {
 	
 	
 	
-	/*
+	/*qwetao123
 	 * public static void main(String[] args) { String s =
 	 * Md5Util.md5Encoding("123456"); String s2 = Md5Util.md5Encoding("1");
 	 * System.out.println(s); System.out.println(s2); }
