@@ -1,12 +1,42 @@
 package com.sj.common.utils;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
+import java.net.URL;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
 
 public class StringUtil {
+	/**
+	 * 
+	 * @Title: isHttpUrl 
+	 * @Description: 判断是否是url
+	 * @param str
+	 * @return
+	 * @return: boolean
+	 */
+	public static boolean isHttpUrl(String str) {
+		
+			
+			try {
+				URL url = new URL(str);
+				InputStream openStream = url.openStream();
+				return true;
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		
+		
+		return false;
+	}
+	
+	
+	
+	
 	/**
 	 * 
 	 * @Title: strToInteger 
